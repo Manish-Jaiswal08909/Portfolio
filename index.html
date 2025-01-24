@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Body and Text Styling */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0a1a2a; /* Dark blue background */
+            margin: 0;
+            padding: 0;
+            color: #1e90ff; /* Bright blue text */
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #1e90ff;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #001a29; /* Darker blue for header */
+            color: #1e90ff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #1e90ff;
+        }
+
+        header nav a {
+            color: #1e90ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        header nav a:hover {
+            color: #ff6347; /* Neon orange hover effect */
+            text-decoration: underline;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: #001f33; /* Dark blue background for hero section */
+            color: #1e90ff;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(30, 144, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+        }
+
+        .buttons a {
+            background-color: #ff6347; /* Neon orange */
+            color: #000;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            box-shadow: 0 5px 15px rgba(255, 99, 71, 0.3);
+            transition: 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background-color: #1e90ff; /* Bright blue on hover */
+            color: #000;
+            box-shadow: 0 10px 20px rgba(30, 144, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* Resume Download Link Styling */
+        .download-link {
+            background-color: #ff6347; /* Neon orange */
+            color: #000;
+            padding: 8px 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1em;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .download-link:hover {
+            background-color: #1e90ff; /* Bright blue on hover */
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* About Section Styling */
+        #about {
+            padding: 50px 20px;
+            background-color: #002140; /* Very dark blue background */
+            color: #1e90ff;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(30, 144, 255, 0.2);
+        }
+
+        /* Skills Section Styling */
+        #skills {
+            padding: 50px 20px;
+            background-color: #001f33;
+            color: #1e90ff;
+        }
+
+        .progress-bar {
+            background-color: #00334e; /* Dark blue progress bar background */
+            border-radius: 25px;
+            height: 25px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 25px;
+            background-color: #1e90ff; /* Bright blue progress */
+        }
+
+        /* Contact Section Styling */
+        #contact {
+            padding: 50px 20px;
+            background-color: #002140;
+            text-align: center;
+            color: #1e90ff;
+        }
+
+        input, textarea {
+            padding: 15px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            border: 2px solid #1e90ff;
+            border-radius: 8px;
+            background-color: #0a1a2a; /* Dark blue for form fields */
+            color: #1e90ff;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #ff6347; /* Neon orange on focus */
+            outline: none;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #ff6347;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1e90ff;
+            color: #000;
+            box-shadow: 0 5px 15px rgba(30, 144, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #001a29;
+            color: #1e90ff;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #1e90ff;
+        }
+
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff6347; /* Neon orange hover */
+        }
+
+        /* Social Links Styling */
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-links p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            color: #1e90ff;
+            margin: 0 15px;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff6347; /* Neon orange on hover */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .buttons a {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            input, textarea {
+                width: 90%;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .buttons a {
+                font-size: 0.9em;
+                padding: 8px 18px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            input, textarea {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="abc.jpg" alt="Manish Kumar Jaiswal" style="width: 300px; height: 300px; border-radius: 50%; margin-bottom: 20px;">
+
+
+        <h1>Hi, I'm Manish Kumar Jaiswal</h1>
+        <p>Software Engineer</p>
+        <div class="buttons">
+            <a href="#">Hire Me</a>
+            <a href="#">Let's Talk</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>wait</p>
+    </section>
+
+    <section id="skills" class="skills section">
+        <h2>My Skills</h2>
+        <!-- Progress Bar for C -->
+        <div class="progress-bar">
+            <span style="width: 80%;"></span>
+        </div>
+        <p>C Programming</p>
+
+        <!-- Progress Bar for DSA with Java -->
+        <div class="progress-bar">
+            <span style="width: 85%;"></span>
+        </div>
+        <p>Data Structures & Algorithms (Java)</p>
+        
+        <!-- Example of other skills -->
+        <div class="progress-bar">
+            <span style="width: 90%;"></span>
+        </div>
+        <p>Java Programming</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <br/>
+            <input type="email" placeholder="Email" required>
+            <br/>
+            <textarea placeholder="Message" required></textarea>
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Contact Details and Social Links -->
+        <div class="social-links">
+            <p>Reach me at:</p>
+            <p>Mobile: <a href="tel:+917068508909">+91-7068508909</a></p>
+            <p>Email: <a href="mailto:jaiswalmanish08909@gmail.com">jaiswalmanish08909@gmail.com</a></p>
+            <p>
+                <a href="https://www.facebook.com/profile.php?id=100015220171667" target="_blank">Facebook</a> | 
+                <a href="https://www.linkedin.com/in/manish-kumar-jaiswal-7554a92aa" target="_blank">LinkedIn</a>
+                <br/>
+                <a class="download-link" href="C:\Users\KIIT\Desktop\⠀⠀\Resume.pdf" target="_blank">Download My Resume</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Manish Kumar Jaiswal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
